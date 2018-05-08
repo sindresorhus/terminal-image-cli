@@ -1,0 +1,48 @@
+{
+	"name": "terminal-image-cli",
+	"version": "0.0.0",
+	"description": "Display images in the terminal",
+	"license": "MIT",
+	"repository": "sindresorhus/terminal-image-cli",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"bin": {
+		"image": "cli.js"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && FORCE_COLOR=1 ava"
+	},
+	"files": [
+		"cli.js"
+	],
+	"keywords": [
+		"cli-app",
+		"cli",
+		"term",
+		"image",
+		"terminal",
+		"img",
+		"ansi",
+		"escape",
+		"png",
+		"jpg",
+		"jpeg"
+	],
+	"dependencies": {
+		"get-stdin": "^6.0.0",
+		"meow": "^5.0.0",
+		"terminal-image": "^0.1.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"execa": "^0.10.0",
+		"has-ansi": "^3.0.0",
+		"xo": "*"
+	}
+}
