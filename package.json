@@ -25,20 +25,20 @@
 	"keywords": [
 		"cli-app",
 		"cli",
-		"term",
 		"image",
 		"terminal",
-		"img",
 		"ansi",
 		"escape",
 		"png",
 		"jpg",
 		"jpeg",
-		"gif"
+		"gif",
+		"animated",
+		"animation"
 	],
 	"dependencies": {
 		"file-type": "^14.6.2",
-		"get-stdin": "^7.0.0",
+		"get-stdin": "^8.0.0",
 		"meow": "^7.0.0",
 		"terminal-image": "^1.2.0"
 	},
@@ -46,6 +46,6 @@
 		"ava": "^2.4.0",
 		"execa": "^4.0.1",
 		"has-ansi": "^4.0.0",
-		"xo": "^0.30.0"
+		"xo": "^0.32.1"
 	}
 }
