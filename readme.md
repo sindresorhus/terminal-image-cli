@@ -2,7 +2,7 @@
 
 > Display images in the terminal
 
-Works in any terminal that supports colors. Supports animated gifs.
+Works in any terminal that supports colors. Supports animated GIFs.
 
 <img src="screenshot.png" width="1082">
 
