@@ -33,12 +33,14 @@
 		"escape",
 		"png",
 		"jpg",
-		"jpeg"
+		"jpeg",
+		"gif"
 	],
 	"dependencies": {
+		"file-type": "^14.6.2",
 		"get-stdin": "^7.0.0",
 		"meow": "^7.0.0",
-		"terminal-image": "^1.0.0"
+		"terminal-image": "^1.2.0"
 	},
 	"devDependencies": {
 		"ava": "^2.4.0",

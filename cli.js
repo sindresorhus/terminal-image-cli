@@ -3,6 +3,7 @@
 const meow = require('meow');
 const getStdin = require('get-stdin');
 const terminalImage = require('terminal-image');
+const fileType = require('file-type');
 
 const cli = meow(`
 	Usage
@@ -23,8 +24,19 @@ if (!input && process.stdin.isTTY) {
 
 (async () => {
 	if (input) {
-		console.log(await terminalImage.file(input));
+		// TODO: Make it `if ((await fileType.fromFile(input))?.ext === 'gif') {` when targeting Node.js 14.
+		if ((await fileType.fromFile(input)).ext === 'gif') {
+			terminalImage.gifFile(input);
+		} else {
+			console.log(await terminalImage.file(input));
+		}
 	} else {
-		console.log(await terminalImage.buffer(await getStdin.buffer()));
+		const stdin = await getStdin.buffer();
+
+		if ((await fileType.fromBuffer(stdin)).ext === 'gif') {
+			terminalImage.gifBuffer(stdin);
+		} else {
+			console.log(await terminalImage.buffer(stdin));
+		}
 	}
 })();
