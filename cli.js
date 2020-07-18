@@ -24,6 +24,7 @@ if (!input && process.stdin.isTTY) {
 
 (async () => {
 	if (input) {
+		// TODO: Make it `if ((await fileType.fromFile(input))?.ext === 'gif') {` when targeting Node.js 14.
 		if ((await fileType.fromFile(input)).ext === 'gif') {
 			terminalImage.gifFile(input);
 		} else {
