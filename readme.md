@@ -1,4 +1,4 @@
-# terminal-image-cli [![Build Status](https://travis-ci.com/sindresorhus/terminal-image-cli.svg?branch=master)](https://travis-ci.com/github/sindresorhus/terminal-image-cli)
+# terminal-image-cli
 
 > Display images in the terminal
 
