@@ -1,9 +1,8 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const getStdin = require('get-stdin');
-const terminalImage = require('terminal-image');
-const fileType = require('file-type');
+import meow from 'meow';
+import getStdin from 'get-stdin';
+import terminalImage from 'terminal-image';
+import fileType from 'file-type';
 
 const cli = meow(`
 	Usage
