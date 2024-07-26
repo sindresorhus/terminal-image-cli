@@ -10,8 +10,8 @@ Works in any terminal that supports colors. Supports animated GIFs.
 
 ## Install
 
-```
-$ npm install --global terminal-image-cli
+```sh
+npm install --global terminal-image-cli
 ```
 
 ## Usage
@@ -30,5 +30,5 @@ $ image --help
 
 ## Related
 
-- [terminal-image](https://github.com/sindresorhus/terminal-image) - API for this module
+- [terminal-image](https://github.com/sindresorhus/terminal-image) - API for this package
 - [terminal-link-cli](https://github.com/sindresorhus/terminal-link-cli) - Create clickable links in the terminal

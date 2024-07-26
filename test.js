@@ -1,5 +1,5 @@
 import test from 'ava';
-import execa from 'execa';
+import {execa} from 'execa';
 import hasAnsi from 'has-ansi';
 
 test('main', async t => {

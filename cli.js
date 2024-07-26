@@ -1,8 +1,9 @@
 #!/usr/bin/env node
+import process from 'node:process';
 import meow from 'meow';
 import getStdin from 'get-stdin';
 import terminalImage from 'terminal-image';
-import fileType from 'file-type';
+import {fileTypeFromFile, fileTypeFromBuffer} from 'file-type';
 
 const cli = meow(`
 	Usage
@@ -12,7 +13,9 @@ const cli = meow(`
 	Examples
 	  $ image unicorn.jpg
 	  $ cat unicorn.jpg | image
-`);
+`, {
+	importMeta: import.meta,
+});
 
 const [input] = cli.input;
 
@@ -21,21 +24,21 @@ if (!input && process.stdin.isTTY) {
 	process.exit(1);
 }
 
-(async () => {
-	if (input) {
-		// TODO: Make it `if ((await fileType.fromFile(input))?.ext === 'gif') {` when targeting Node.js 14.
-		if ((await fileType.fromFile(input)).ext === 'gif') {
-			terminalImage.gifFile(input);
-		} else {
-			console.log(await terminalImage.file(input));
-		}
-	} else {
-		const stdin = await getStdin.buffer();
+if (input) {
+	const {ext} = await fileTypeFromFile(input);
 
-		if ((await fileType.fromBuffer(stdin)).ext === 'gif') {
-			terminalImage.gifBuffer(stdin);
-		} else {
-			console.log(await terminalImage.buffer(stdin));
-		}
+	if (ext === 'gif') {
+		terminalImage.gifFile(input);
+	} else {
+		console.log(await terminalImage.file(input));
 	}
-})();
+} else {
+	const stdin = await getStdin.buffer();
+	const {ext} = await fileTypeFromBuffer(stdin);
+
+	if (ext === 'gif') {
+		terminalImage.gifBuffer(stdin);
+	} else {
+		console.log(await terminalImage.buffer(stdin));
+	}
+}
