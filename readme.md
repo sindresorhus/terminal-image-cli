@@ -6,7 +6,7 @@ Works in any terminal that supports colors. Supports animated GIFs.
 
 <img src="screenshot.png" width="1082">
 
-*In iTerm, the image will be [displayed in full resolution](screenshot-iterm.jpg), since iTerm has [special image support](https://www.iterm2.com/documentation-images.html).*
+*In iTerm, Kitty, WezTerm, and other terminals with graphics support, the image will be [displayed in full resolution](screenshot-iterm.jpg). In other terminals, it will be rendered using ANSI block characters.*
 
 ## Install
 
