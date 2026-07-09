@@ -16,7 +16,7 @@ npm install --global terminal-image-cli
 
 ## Usage
 
-```
+```text
 $ image --help
 
   Usage

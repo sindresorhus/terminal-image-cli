@@ -15,7 +15,7 @@
 		"image": "./cli.js"
 	},
 	"engines": {
-		"node": ">=20"
+		"node": ">=22"
 	},
 	"scripts": {
 		"test": "xo && FORCE_COLOR=1 ava"
@@ -38,15 +38,15 @@
 		"animation"
 	],
 	"dependencies": {
-		"file-type": "^21.0.0",
-		"get-stdin": "^9.0.0",
-		"meow": "^13.2.0",
-		"terminal-image": "^4.0.0"
+		"file-type": "^22.0.1",
+		"get-stdin": "^10.0.0",
+		"meow": "^14.1.0",
+		"terminal-image": "^5.0.1"
 	},
 	"devDependencies": {
-		"ava": "^6.4.1",
-		"execa": "^9.6.0",
+		"ava": "^8.0.1",
+		"execa": "^9.6.1",
 		"has-ansi": "^6.0.2",
-		"xo": "^1.2.2"
+		"xo": "^4.0.0"
 	}
 }
